@@ -1,4 +1,4 @@
--- Profit and product analysis
+-- PostgreSQL profit and product analysis
 
 SELECT region, SUM(profit) AS total_profit
 FROM sales

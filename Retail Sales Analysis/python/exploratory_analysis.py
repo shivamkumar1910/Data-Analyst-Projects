@@ -188,8 +188,10 @@ def main():
         print(f"\n{error}")
         print("Place the cleaned dataset here before running the analysis:")
         print(project_root / "data" / "cleaned" / "superstore_cleaned.csv")
+        raise SystemExit(1)
     except Exception as error:
         print(f"\nUnexpected error: {error}")
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

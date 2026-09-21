@@ -1,4 +1,4 @@
--- Business Questions for Retail Sales Analysis
+-- PostgreSQL business questions for Retail Sales Analysis
 -- Each section includes the actual business question, SQL, and interpretation notes.
 
 -- Question 1: Which region generates the highest sales?

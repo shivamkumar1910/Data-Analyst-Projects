@@ -1,6 +1,11 @@
+-- PostgreSQL version
 -- Create the main sales table for the Sample Superstore dataset
 -- Update the database name if needed before running this script.
 
+GRANT ALL PRIVILEGES ON DATABASE neondb TO neondb_owner;
+GRANT USAGE, CREATE ON SCHEMA public TO neondb_owner;
+
+SELECT current_database() AS neondb;
 CREATE TABLE IF NOT EXISTS sales (
     id SERIAL PRIMARY KEY,
     row_id INTEGER,

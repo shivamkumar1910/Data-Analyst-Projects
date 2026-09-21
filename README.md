@@ -1,21 +1,20 @@
 # My Data Analyst Portfolio
 
-Welcome to my portfolio workspace. This repository is the home for all my data analysis projects, case studies, dashboards, and learning work. It is organized so I can keep my projects clean, professional, and easy to present during interviews, networking calls, and portfolio reviews.
+Welcome to my portfolio workspace. This folder is where I keep my beginner-to-intermediate analytics projects, case studies, and dashboard work. The goal is to build a clean, professional portfolio that shows how I can move from raw data to business insight using SQL, Python, and data visualization tools.
 
-I use this space to showcase my practical skills in data cleaning, exploratory analysis, SQL, business reporting, and data visualization. As I grow, I will continue adding more projects here to reflect my learning journey and real-world analytical thinking.
+This workspace is designed to be easy to explain in interviews and easy to expand as I add more projects over time.
 
 ---
 
 ## Portfolio Purpose
 
-This workspace is designed to help me:
+I use this space to show that I can:
 
-- Build a strong data analyst portfolio
-- Practice end-to-end data analysis projects
-- Work with real business-style datasets
-- Show SQL, Python, and Power BI skills together
-- Present my work in a clean and interview-ready format
-- Keep my projects organized as I continue uploading new work
+- clean and prepare raw data
+- answer business questions with SQL
+- create simple dashboards and reports
+- explain findings in plain business language
+- work on realistic project scenarios for a junior data analyst
 
 ---
 
@@ -23,109 +22,103 @@ This workspace is designed to help me:
 
 ### 1. Retail Sales Analysis Dashboard
 
-Project folder: [Retail-Sales-Analysis](Retail-Sales-Analysis)
+Project folder: [Retail Sales Analysis](Retail%20Sales%20Analysis)
 
-This project demonstrates:
+This project focuses on:
 
-- Data cleaning with Python and Pandas
-- Exploratory data analysis
-- SQL querying and analysis
-- KPI calculation
-- Business-focused insights
-- Dashboard planning in Power BI
+- data cleaning with Python and Pandas
+- exploratory analysis
+- SQL analysis in PostgreSQL
+- business KPI calculation
+- Power BI dashboard planning
 
-It is a beginner-to-intermediate retail analytics project using the public Sample Superstore dataset.
+### 2. E-commerce Funnel Analysis
+
+Project folder: [ecommerce-funnel-analysis](ecommerce-funnel-analysis)
+
+This project focuses on:
+
+- synthetic e-commerce customer event data
+- funnel analysis from signup to purchase
+- SQL analysis in MySQL
+- conversion and drop-off analysis
+- Tableau dashboard design and reporting
 
 ---
 
-## Future Projects
+## Future Project Ideas
 
-This workspace will continue to grow with additional portfolio projects such as:
+I will continue adding projects in areas such as:
 
-- Sales performance dashboards
-- Customer churn analysis
-- Marketing campaign analysis
-- E-commerce analytics
-- Financial and profit analysis
+- customer churn analysis
+- marketing campaign performance
+- product analytics
+- sales performance dashboards
+- financial analysis
 - HR analytics
-- Product analytics
-- Time-series forecasting
-- KPI reporting dashboards
-- SQL challenge solutions
-
-Each future project will follow a consistent structure so the portfolio remains organized and easy to navigate.
+- SQL practice projects
+- KPI and dashboard case studies
 
 ---
 
-## Suggested Project Structure
+## Project Structure Standard
 
-Each project can follow this layout:
+Each project is organized in a simple, readable structure:
 
 ```text
 Project-Name/
 ├── README.md
 ├── data/
-│   ├── raw/
-│   └── cleaned/
-├── python/
 ├── sql/
-├── powerbi/
-├── reports/
-├── requirements.txt
-└── notebooks/   # optional, if used
+├── python/   # if needed
+├── tableau/  # if relevant
+├── reports/  # if relevant
+└── insights.md
 ```
 
-This structure helps keep analysis, reporting, and business insights separated and easy to explain.
+This makes every project easier to explain, share, and review.
 
 ---
 
-## Skills I Aim to Showcase
+## Skills Demonstrated
 
 - Python for data cleaning and analysis
-- Pandas for manipulation and EDA
-- SQL for business questions and data exploration
-- PostgreSQL or MySQL for database work
-- Power BI for dashboard creation
-- Data storytelling and business communication
-- KPI and metric interpretation
-- Problem-solving with real business datasets
+- Pandas for manipulation and basic EDA
+- SQL for data exploration and business questions
+- MySQL and PostgreSQL database work
+- Tableau dashboard building
+- Power BI dashboard planning
+- Business communication and insight writing
 
 ---
 
-## Project Standards
+## Portfolio Standards
 
-I will aim to keep each project:
+Each project is kept:
 
-- Easy to understand
-- Business-focused
-- Cleanly documented
-- Interview-ready
-- Based on real datasets or realistic business cases
-- Supported by clear explanations and key insights
+- beginner-friendly
+- realistic and business-focused
+- easy to explain in interviews
+- documented clearly
+- based on synthetic or public datasets
 
 ---
 
-## How to Use This Workspace
+## How to Use This Folder
 
 1. Open a project folder
-2. Read its README for the business problem and scope
-3. Check the data folder for raw and cleaned files
-4. Review the Python scripts for analysis steps
-5. Explore SQL queries for database analysis
-6. Review dashboards and reports for final business insights
+2. Read the README for the business problem
+3. Review the dataset and scripts
+4. Run the SQL analysis
+5. Check the dashboard or report design
+6. Use the insight file to explain the findings
 
 ---
 
-## Portfolio Goal
+## Current Status
 
-The goal of this workspace is to show a clear progression from raw data to meaningful business insight. Over time, this portfolio will reflect my growth as a data analyst and my ability to turn data into action.
-
----
-
-## Status
-
-- Active portfolio workspace: Yes
-- Current project: Retail Sales Analysis Dashboard
-- Future uploads: Planned and ongoing
+- Portfolio workspace: active
+- Current projects: 2
+- Future uploads: planned
 
 Thank you for visiting my portfolio workspace.

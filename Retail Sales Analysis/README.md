@@ -116,8 +116,9 @@ Recommendations will be added after the actual dataset is analyzed. The project 
 9. Import the cleaned dataset.
 10. Build the dashboard using the guide in `powerbi/dashboard_guide.md`.
 
-## Notes
+## Project Notes
 
 - The dataset is not included in this project folder because it is a public file that must be downloaded into the local project directory.
 - The scripts are prepared to handle the dataset once it is placed in the expected location.
 - All calculations and recommendations should be based on the actual cleaned data from the source file.
+- This project is intentionally beginner-friendly and suitable for a data analyst portfolio.

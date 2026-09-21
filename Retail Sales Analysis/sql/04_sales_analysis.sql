@@ -1,4 +1,4 @@
--- Regional, category, and time sales analysis
+-- PostgreSQL regional, category, and time sales analysis
 
 SELECT region, SUM(sales) AS total_sales
 FROM sales

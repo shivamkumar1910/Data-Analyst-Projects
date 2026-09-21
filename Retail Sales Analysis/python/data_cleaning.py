@@ -2,14 +2,35 @@ import pandas as pd
 from pathlib import Path
 
 
-def load_dataset(raw_path):
-    """Load the raw CSV file and raise a clear error if it is missing."""
-    if not raw_path.exists():
+def find_raw_dataset(raw_folder):
+    """Return the standard input file, or the only CSV placed in the raw folder."""
+    preferred_path = raw_folder / "superstore.csv"
+    if preferred_path.exists():
+        return preferred_path
+
+    csv_files = sorted(raw_folder.glob("*.csv")) if raw_folder.exists() else []
+    if len(csv_files) == 1:
+        return csv_files[0]
+
+    if not csv_files:
         raise FileNotFoundError(
-            f"Dataset not found at: {raw_path}. Please download the Sample Superstore CSV and save it here."
+            f"No CSV dataset found in: {raw_folder}. "
+            "Download the Sample Superstore CSV and save it there."
         )
 
-    df = pd.read_csv(raw_path)
+    raise FileNotFoundError(
+        f"More than one CSV dataset was found in: {raw_folder}. "
+        "Keep only the intended input file or name it superstore.csv."
+    )
+
+
+def load_dataset(raw_path):
+    """Load the selected raw CSV dataset with a CSV-friendly encoding fallback."""
+    try:
+        df = pd.read_csv(raw_path)
+    except UnicodeDecodeError:
+        df = pd.read_csv(raw_path, encoding="latin-1")
+        print("Loaded dataset using latin-1 encoding.")
     print(f"Raw dataset loaded: {df.shape[0]} rows, {df.shape[1]} columns")
     return df
 
@@ -159,23 +180,28 @@ def clean_dataset(df):
 
 def main():
     project_root = Path(__file__).resolve().parents[1]
-    raw_path = project_root / "data" / "raw" / "superstore.csv"
+    raw_folder = project_root / "data" / "raw"
     cleaned_path = project_root / "data" / "cleaned" / "superstore_cleaned.csv"
 
     try:
+        raw_path = find_raw_dataset(raw_folder)
+        print(f"Using raw dataset: {raw_path.name}")
         df = load_dataset(raw_path)
         show_dataset_overview(df)
         check_missing_values(df)
         check_duplicates(df)
         cleaned_df = clean_dataset(df)
+        cleaned_path.parent.mkdir(parents=True, exist_ok=True)
         cleaned_df.to_csv(cleaned_path, index=False)
         print(f"\nCleaned dataset saved to: {cleaned_path}")
     except FileNotFoundError as error:
         print(f"\n{error}")
         print("Place the dataset here before running the script:")
-        print(raw_path)
+        print(raw_folder)
+        raise SystemExit(1)
     except Exception as error:
         print(f"\nUnexpected error: {error}")
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

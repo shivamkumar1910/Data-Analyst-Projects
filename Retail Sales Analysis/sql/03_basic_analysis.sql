@@ -1,4 +1,4 @@
--- Basic KPI questions
+-- PostgreSQL basic KPI questions
 
 SELECT COUNT(DISTINCT order_id) AS total_orders
 FROM sales;

@@ -1,7 +1,8 @@
 -- Load the cleaned CSV into the sales table.
--- Update the file path if needed depending on your PostgreSQL setup.
+-- Use this in PostgreSQL (psql or pgAdmin).
+-- The cleaned CSV must be created first by running python/data_cleaning.py.
 
-COPY sales (
+\copy sales (
     row_id,
     order_id,
     order_date,
@@ -24,7 +25,7 @@ COPY sales (
     discount,
     profit
 )
-FROM 'C:/Users/Dell/Documents/Github/Data Analyst Projects/Retail-Sales-Analysis/data/cleaned/superstore_cleaned.csv'
+FROM 'C:/Users/Dell/Documents/Github/Data Analyst Projects/Retail Sales Analysis/data/cleaned/superstore_cleaned.csv'
 WITH (
     FORMAT CSV,
     HEADER TRUE,
@@ -32,3 +33,4 @@ WITH (
 );
 
 SELECT COUNT(*) AS total_rows FROM sales;
+
